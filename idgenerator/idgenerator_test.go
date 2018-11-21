@@ -7,7 +7,7 @@ import (
 )
 
 func TestCache(t *testing.T) {
-	Convey("check counter module", t, func() {
+	Convey("check accumulator module", t, func() {
 		Convey("implement Client interface", func() {
 
 			redisClient := redis.NewClient(&redis.Options{

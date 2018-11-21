@@ -1,7 +1,5 @@
 package idgenerator
 
-import "fmt"
-
 type IdGenerator interface {
 	Incr(string, ...int64) (int64, error)
 	Get(string) (int64, error)
@@ -21,7 +19,5 @@ func (c *IdGeneratorWrapper) Get(key string) (int64, error) {
 }
 
 func (c *IdGeneratorWrapper) Reset(key string) (int64, error) {
-	fmt.Println("jax1", c)
-	fmt.Println("jax2", c.IdGenerator)
 	return c.IdGenerator.Reset(key)
 }
