@@ -12,6 +12,4 @@ func main() {
 
 	fmt.Println(redisClient.Set("name", "jax", 0).Result())
 	fmt.Println(redisClient.Get("name").String())
-	redisClient.DecrBy().Result()
-
 }
